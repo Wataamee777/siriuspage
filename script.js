@@ -31,7 +31,7 @@ if (modalMenu) {
 // ロゴクリックで戻る
 if (logoWrap) {
   logoWrap.addEventListener("click", () => {
-    location.href = "../";
+    location.href = "/siriuspage";
   });
 }
 
