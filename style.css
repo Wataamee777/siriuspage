@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: #0d0d0d;
+  color: white;
+}
+
+/* 🌌 背景 */
+#stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* ===== ヘッダー ===== */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: rgba(17,17,17,0.8);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+#logo {
+  height: 40px;
+}
+
+.site-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* PCナビ */
+.nav-pc a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  transition: 0.2s;
+}
+
+.nav-pc a:hover {
+  color: #aaa;
+}
+
+/* ハンバーガー */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* ===== モーダル ===== */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-menu {
+  background: #111;
+  padding: 30px 40px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-menu a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+.modal-menu a:hover {
+  color: #aaa;
+}
+
+/* アニメ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ===== メイン中央 ===== */
+#center {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ===== セクション ===== */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* ボタン */
+.btn {
+  padding: 10px 20px;
+  background: white;
+  color: black;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+/* ===== スマホ ===== */
+@media (max-width: 768px) {
+  .nav-pc {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
